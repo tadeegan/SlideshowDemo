@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SlideShowViewController.h
 //  SimpleSlideShow
 //
 //  Created by Thomas on 7/28/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SlideShowViewController : UICollectionViewController
 
 @end

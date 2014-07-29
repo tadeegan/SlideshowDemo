@@ -7,12 +7,18 @@
 //
 
 #import "AppDelegate.h"
+#import "SlideShowViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    SlideShowViewController *controller = [[SlideShowViewController alloc] init];
+    self.window.rootViewController = controller;
     return YES;
 }
 							

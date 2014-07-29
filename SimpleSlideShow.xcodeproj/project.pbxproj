@@ -13,14 +13,13 @@
 		8A419B04198768B80074D4E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A419B02198768B80074D4E6 /* InfoPlist.strings */; };
 		8A419B06198768B80074D4E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A419B05198768B80074D4E6 /* main.m */; };
 		8A419B0A198768B80074D4E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A419B09198768B80074D4E6 /* AppDelegate.m */; };
-		8A419B0D198768B80074D4E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A419B0B198768B80074D4E6 /* Main.storyboard */; };
-		8A419B10198768B80074D4E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A419B0F198768B80074D4E6 /* ViewController.m */; };
 		8A419B12198768B80074D4E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A419B11198768B80074D4E6 /* Images.xcassets */; };
 		8A419B19198768B90074D4E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A419B18198768B90074D4E6 /* XCTest.framework */; };
 		8A419B1A198768B90074D4E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A419AF9198768B80074D4E6 /* Foundation.framework */; };
 		8A419B1B198768B90074D4E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A419AFD198768B80074D4E6 /* UIKit.framework */; };
 		8A419B23198768B90074D4E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A419B21198768B90074D4E6 /* InfoPlist.strings */; };
 		8A419B25198768B90074D4E6 /* SimpleSlideShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A419B24198768B90074D4E6 /* SimpleSlideShowTests.m */; };
+		8A419B3319876EB80074D4E6 /* SlideShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A419B3219876EB80074D4E6 /* SlideShowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +43,14 @@
 		8A419B07198768B80074D4E6 /* SimpleSlideShow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleSlideShow-Prefix.pch"; sourceTree = "<group>"; };
 		8A419B08198768B80074D4E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A419B09198768B80074D4E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A419B0C198768B80074D4E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8A419B0E198768B80074D4E6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8A419B0F198768B80074D4E6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A419B11198768B80074D4E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8A419B17198768B90074D4E6 /* SimpleSlideShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSlideShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A419B18198768B90074D4E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8A419B20198768B90074D4E6 /* SimpleSlideShowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSlideShowTests-Info.plist"; sourceTree = "<group>"; };
 		8A419B22198768B90074D4E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8A419B24198768B90074D4E6 /* SimpleSlideShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSlideShowTests.m; sourceTree = "<group>"; };
+		8A419B3119876EB80074D4E6 /* SlideShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideShowViewController.h; sourceTree = "<group>"; };
+		8A419B3219876EB80074D4E6 /* SlideShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideShowViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +112,8 @@
 			children = (
 				8A419B08198768B80074D4E6 /* AppDelegate.h */,
 				8A419B09198768B80074D4E6 /* AppDelegate.m */,
-				8A419B0B198768B80074D4E6 /* Main.storyboard */,
-				8A419B0E198768B80074D4E6 /* ViewController.h */,
-				8A419B0F198768B80074D4E6 /* ViewController.m */,
+				8A419B3119876EB80074D4E6 /* SlideShowViewController.h */,
+				8A419B3219876EB80074D4E6 /* SlideShowViewController.m */,
 				8A419B11198768B80074D4E6 /* Images.xcassets */,
 				8A419B00198768B80074D4E6 /* Supporting Files */,
 			);
@@ -229,7 +226,6 @@
 			files = (
 				8A419B12198768B80074D4E6 /* Images.xcassets in Resources */,
 				8A419B04198768B80074D4E6 /* InfoPlist.strings in Resources */,
-				8A419B0D198768B80074D4E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A419B10198768B80074D4E6 /* ViewController.m in Sources */,
+				8A419B3319876EB80074D4E6 /* SlideShowViewController.m in Sources */,
 				8A419B0A198768B80074D4E6 /* AppDelegate.m in Sources */,
 				8A419B06198768B80074D4E6 /* main.m in Sources */,
 			);
@@ -279,14 +275,6 @@
 				8A419B03198768B80074D4E6 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8A419B0B198768B80074D4E6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A419B0C198768B80074D4E6 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		8A419B21198768B90074D4E6 /* InfoPlist.strings */ = {
