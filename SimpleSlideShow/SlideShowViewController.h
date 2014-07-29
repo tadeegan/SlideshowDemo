@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SlideShowViewController : UICollectionViewController
+@interface SlideShowViewController : UIViewController
 
 @end
