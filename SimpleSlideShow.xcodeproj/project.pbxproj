@@ -20,6 +20,7 @@
 		8A419B23198768B90074D4E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A419B21198768B90074D4E6 /* InfoPlist.strings */; };
 		8A419B25198768B90074D4E6 /* SimpleSlideShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A419B24198768B90074D4E6 /* SimpleSlideShowTests.m */; };
 		8A419B3319876EB80074D4E6 /* SlideShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A419B3219876EB80074D4E6 /* SlideShowViewController.m */; };
+		8A419B391988D0C50074D4E6 /* SlideShowCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A419B381988D0C50074D4E6 /* SlideShowCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		8A419B24198768B90074D4E6 /* SimpleSlideShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSlideShowTests.m; sourceTree = "<group>"; };
 		8A419B3119876EB80074D4E6 /* SlideShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideShowViewController.h; sourceTree = "<group>"; };
 		8A419B3219876EB80074D4E6 /* SlideShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideShowViewController.m; sourceTree = "<group>"; };
+		8A419B371988D0C50074D4E6 /* SlideShowCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideShowCollectionViewLayout.h; sourceTree = "<group>"; };
+		8A419B381988D0C50074D4E6 /* SlideShowCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideShowCollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				8A419B09198768B80074D4E6 /* AppDelegate.m */,
 				8A419B3119876EB80074D4E6 /* SlideShowViewController.h */,
 				8A419B3219876EB80074D4E6 /* SlideShowViewController.m */,
+				8A419B371988D0C50074D4E6 /* SlideShowCollectionViewLayout.h */,
+				8A419B381988D0C50074D4E6 /* SlideShowCollectionViewLayout.m */,
 				8A419B11198768B80074D4E6 /* Images.xcassets */,
 				8A419B00198768B80074D4E6 /* Supporting Files */,
 			);
@@ -245,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A419B3319876EB80074D4E6 /* SlideShowViewController.m in Sources */,
+				8A419B391988D0C50074D4E6 /* SlideShowCollectionViewLayout.m in Sources */,
 				8A419B0A198768B80074D4E6 /* AppDelegate.m in Sources */,
 				8A419B06198768B80074D4E6 /* main.m in Sources */,
 			);
