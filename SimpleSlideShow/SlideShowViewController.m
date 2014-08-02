@@ -7,15 +7,15 @@
 //
 
 #import "SlideShowViewController.h"
+#import "SlideShowCollectionViewLayout.h"
 
 static NSString *cellIdentifier = @"kCellidentifier";
 
 @interface SlideShowViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
 
 @property (nonatomic) UICollectionView *collectionView;
-@property (nonatomic) UICollectionViewLayout *layout;
-
 @property (nonatomic) NSInteger currentPage;
+@property (nonatomic) BOOL isScrolling;
 
 @end
 
@@ -27,10 +27,11 @@ static NSString *cellIdentifier = @"kCellidentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.isScrolling = NO;
     self.currentPage = 0;
     self.collectionView = ({
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:({
-            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+            SlideShowCollectionViewLayout *layout = [[SlideShowCollectionViewLayout alloc] init];
             layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
             layout.minimumLineSpacing = 0.0;
             layout.minimumInteritemSpacing = 0.0;
@@ -41,6 +42,7 @@ static NSString *cellIdentifier = @"kCellidentifier";
         collectionView.dataSource = self;
         collectionView.delegate = self;
         collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        collectionView.showsHorizontalScrollIndicator = NO;
         collectionView;
     });
     [self.view addSubview:self.collectionView];
@@ -51,6 +53,12 @@ static NSString *cellIdentifier = @"kCellidentifier";
     [super viewWillLayoutSubviews];
     [self.collectionView.collectionViewLayout invalidateLayout];
     self.collectionView.contentOffset = CGPointMake(self.currentPage * self.view.bounds.size.width, 0);
+    
+}
+
+- (BOOL)shouldAutorotate
+{
+    return !self.isScrolling;
 }
 
 #pragma mark -
@@ -72,7 +80,6 @@ static NSString *cellIdentifier = @"kCellidentifier";
         view.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         view;
     });
-    NSLog(@"%@",cell);
     [cell addSubview:square];
     return cell;
 }
@@ -82,9 +89,20 @@ static NSString *cellIdentifier = @"kCellidentifier";
     return collectionView.bounds.size;
 }
 
+#pragma mark -
+#pragma mark UIScrollView delegate methods
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.isScrolling = YES;
+}
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    self.isScrolling = NO;
+    [UIViewController attemptRotationToDeviceOrientation];
     self.currentPage = scrollView.contentOffset.x / scrollView.frame.size.width;
+    [((SlideShowCollectionViewLayout *)self.collectionView.collectionViewLayout) setCurrentPageIndex:self.currentPage];
 }
 
 @end
